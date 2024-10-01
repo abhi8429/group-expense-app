@@ -57,6 +57,7 @@
     #authForm="ngForm"
     class="col-12 col-md-8 text-center d-flex flex-column justify-content-center align-items-center"
   >
+  <span *ngIf="successMessage" class="text-success">{{successMessage}}</span>
     <h2>{{ isLoginMode ? "Login" : "Register" }}</h2>
     <span *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</span>
     <div
