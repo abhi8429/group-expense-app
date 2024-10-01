@@ -1,0 +1,16 @@
+<div class="expense-container">
+    <h2>Add Expense</h2>
+    <form (ngSubmit)="addExpense()">
+      <input type="number" placeholder="Amount" [(ngModel)]="amount" name="amount" required />
+      <input type="text" placeholder="Description" [(ngModel)]="description" name="description" required />
+      <input type="date" [(ngModel)]="date" name="date" />
+      <input type="text" placeholder="Category" [(ngModel)]="category" name="category" />
+      <button type="submit">Add Expense</button>
+    </form>
+  
+    <h3>Expenses for Group</h3>
+    <ul>
+      <li *ngFor="let expense of expenses">{{ expense.description }} - ${{ expense.amount }}</li>
+    </ul>
+  </div>
+  
