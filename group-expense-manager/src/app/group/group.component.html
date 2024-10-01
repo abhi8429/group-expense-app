@@ -1,12 +1,16 @@
-<div class="group-container">
+<div class="group-container d-flex flex-column justify-content-start pt-5">
     <h2>Create Group</h2>
-    <form (ngSubmit)="createGroup()">
-      <input type="text" placeholder="Group Name" [(ngModel)]="groupName" name="groupName" required />
-      <input type="text" placeholder="Description" [(ngModel)]="description" name="description" />
-      <button type="submit">Create</button>
+    <form (ngSubmit)="createGroup()" class="col-12 col-md-8 text-center d-flex flex-column justify-content-center align-items-center">
+      <div class="col-12 col-md-8">
+        <input type="text" placeholder="Group Name" [(ngModel)]="groupName" name="groupName" required />
+      </div>
+      <div class="col-12 col-md-8">
+        <input type="text" placeholder="Description" [(ngModel)]="description" name="description" />
+      </div>
+      <div class="col-12 col-md-8"><button type="submit" class="secondary-button">Create</button></div>
     </form>
   
-    <h3>Your Groups</h3>
+    <h3 class="mt-4">Your Groups</h3>
     <ul>
       <li *ngFor="let group of groups">{{ group.groupName}} - {{ group.description }}</li>
     </ul>
