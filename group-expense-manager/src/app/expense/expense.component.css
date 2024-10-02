@@ -16,4 +16,13 @@
   ul {
     list-style: none;
   }
-  
+  .create{
+    margin-left: 0px !important;
+  }
+  .padding{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .custom-btn{
+    padding: 12px 16px;
+  }

@@ -9,11 +9,21 @@
     padding: 8px;
   }
   
-  button {
-    margin: 5px;
-  }
   
   ul {
     list-style: none;
   }
-  
+  .font-size{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .create{
+    margin-left: 0px !important;
+  }
+  .padding{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .custom-btn{
+    padding: 12px 16px;
+  }

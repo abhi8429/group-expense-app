@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+
 interface Expense {
-  amount: number;
   description: string;
+  amount: number;
   date: string;
   category: string;
 }
@@ -11,15 +12,15 @@ interface Expense {
 })
 export class ExpenseService {
   private expenses: { [groupId: string]: Expense[] } = {};
-  constructor() { }
+
   addExpense(groupId: string, amount: number, description: string, date: string, category: string) {
     if (!this.expenses[groupId]) {
-      this.expenses[groupId] = [];
+      this.expenses[groupId] = []; // Initialize if not exists
     }
-    this.expenses[groupId].push({ amount, description, date, category });
+    this.expenses[groupId].push({ description, amount, date, category });
   }
 
-  getExpenses(groupId: string) {
-    return this.expenses[groupId] || [];
+  getExpenses(groupId: string): Expense[] {
+    return this.expenses[groupId] || []; // Return empty array if no expenses
   }
 }
